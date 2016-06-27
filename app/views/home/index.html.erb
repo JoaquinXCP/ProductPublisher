@@ -1,5 +1,5 @@
 <% @products.each do |p| %>
-<div class="w3-third">
+<div class="w3-container">
 	<div class="w3-card-2">
 		<div class="w3-blue">
 		<%= p.product_name %> <br>
@@ -7,10 +7,10 @@
 
 		<%= p.product_price %> <br>
 		<%= p.product_description %> <br>
-		<%= p.user.username %> <br>
 		<%= p.user.email %> <br>
 		<%= link_to 'Ver', product_path(p) %>
 		<%= link_to 'Editar', edit_product_path(p) %>
 	</div>
 </div>
+<br>
 <% end %>
