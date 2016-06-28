@@ -27,6 +27,7 @@
     <%= f.label :user_id %><br>
     <%= f.text_field :user_id %>
   </div>
+  <%= f.collection_select :user_id, User.all, :id, :username, include_blank: true  %>
   <div class="field">
     <%= f.label :category_id %><br>
     <%= f.text_field :category_id %>

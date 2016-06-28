@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :products do
+    resources :users
+  end
   resources :categories
   resources :products
   resources :users do
