@@ -5,9 +5,11 @@ one:
   product_price: 9.99
   product_description: MyText
   user_id: 
+  category_id: 
 
 two:
   product_name: MyString
   product_price: 9.99
   product_description: MyText
   user_id: 
+  category_id: 

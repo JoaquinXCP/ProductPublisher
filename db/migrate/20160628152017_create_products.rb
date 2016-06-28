@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :product_price
       t.text :product_description
       t.references :user, index: true, foreign_key: true
+      t.references :category, index: true, foreign_key: true
 
       t.timestamps null: false
     end

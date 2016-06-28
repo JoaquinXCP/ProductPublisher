@@ -5,15 +5,18 @@
   <title>ProductPublisher</title>
  
   	<%= csrf_meta_tags %>
-
-	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 </head>
 <body>
- <ul class="w3-navbar w3-black">
-  <li><%= link_to 'Home', root_path %></li>
-  <li><%= link_to 'Products', products_path %></li>
-  <li><%= link_to 'Users', users_path %></li>
-</ul>
+	<div class="col s12 m12 l12" >
+        <nav>
+           <div class="nav-wrapper">
+				<li><%= link_to 'Home', root_path %></li>      
+                <li><%= link_to 'Products', products_path %></li>
+                <li><%= link_to 'Users', users_path %></li>
+                <li><%= link_to 'Categories', categories_path %></li>
+           </div>
+        </nav>
+     </div>
 <%= yield %>
 
 </body>
