@@ -1,16 +1,19 @@
+<% @counter = 0 %>
 <% @products.each do |p| %>
-<div class="w3-container">
-	<div class="w3-card-2">
-		<div class="w3-blue">
-		<%= p.product_name %> <br>
+<% @counter += 1  %>
+
+		<div class="container-fluid">
+		<div class="well">
+		<label style="color:teal"><%= link_to p.product_name, product_path(p) %></label> <br>
+
+		<%= p.product_price %> <br> 
+		<%= p.product_description %> <br>
+		<%= p.user.email %> <br>		
+		<img src="http://lorempixel.com/image_output/food-q-c-200-200-6.jpg" style="clear: both;max-width: 200px;max-height: 200px;margin-left:200px" class="img-responsive" alt="Cinque Terre">
+		<%= link_to 'Ver', product_path(p), class: "btn btn-primary" %>
+		<%= link_to 'Editar', edit_product_path(p), class: "btn btn-primary"  %>
+		</div>
 		</div>
 
-		<%= p.product_price %> <br>
-		<%= p.product_description %> <br>
-		<%= p.user.email %> <br>
-		<%= link_to 'Ver', product_path(p) %>
-		<%= link_to 'Editar', edit_product_path(p) %>
-	</div>
-</div>
 <br>
 <% end %>
